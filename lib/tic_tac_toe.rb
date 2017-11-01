@@ -24,5 +24,5 @@ def input_to_index(user_input)
 end
 
 def move(board, position, token)
-  board[input_to_index] = token
+  board[position] = token
 end

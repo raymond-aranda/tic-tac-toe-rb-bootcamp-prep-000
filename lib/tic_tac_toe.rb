@@ -56,4 +56,9 @@ def current_player(board)
 end
 
 def won?(board)
+  WIN_COMBINATIONS.detect do |win_combination|
+    if board[win_combination[0]] == board[win_combination[1]] &&
+      board[win_combination[1]] == board[win_combination[2]] &&
+      position_taken?(board, index = win_combination[0])
+  end
 end

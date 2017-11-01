@@ -23,10 +23,14 @@ def input_to_index(user_input)
   user_input = user_input.to_i - 1
 end
 
-def move(board, position, token)
-  board[position] = token
+def move(board, index, token)
+  board[index] = token
 end
 
-def position_taken?(board, position)
-  board[position] == "X" || board[position] == "O"
+def position_taken?(board, index)
+  board[index] == "X" || board[index] == "O"
+end
+
+def valid_move?(board, index)
+  !position_taken
 end
